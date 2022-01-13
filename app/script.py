@@ -20,7 +20,7 @@ def validateImage(imgur_link):
         return False
     return True
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 
 @app.route('/')
 def index():
