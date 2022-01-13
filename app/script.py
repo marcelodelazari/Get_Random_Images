@@ -24,7 +24,7 @@ app = Flask(__name__, template_folder='templates')
 
 @app.route('/')
 def index():
-
+    imgur_req = Request("https://i.imgur.com/Y4Beqvb", headers={'User-Agent': 'Mozilla/5.0'})
     return render_template('index.html', random_img="https://i.imgur.com/r7QL273.png")
 
 
