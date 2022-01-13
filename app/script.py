@@ -20,5 +20,6 @@ def index():
 
     return render_template('index.html', random_img=img_link)
 
+
 if __name__ == "__main__":
     app.run()
