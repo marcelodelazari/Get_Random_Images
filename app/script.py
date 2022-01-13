@@ -24,8 +24,14 @@ app = Flask(__name__, template_folder='templates')
 
 @app.route('/')
 def index():
-    foda-se
-    imgur_req = Request("https://i.imgur.com/Y4Beqvb", headers={'User-Agent': 'Mozilla/5.0'})
+    found_image = False
+    while not found_image:
+
+        site = getRandomLink()
+        req = Request(site, headers={'User-Agent': 'Mozilla/5.0'})
+        html = str(urlopen(req).read())
+        found_image=True
+
     return render_template('index.html', random_img="https://i.imgur.com/r7QL273.png")
 
 
